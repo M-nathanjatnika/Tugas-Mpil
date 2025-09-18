@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hitung Jumlah Nama x 5</title>
+</head>
+<body>
+  <h2>Hasil Perhitungan Nama</h2>
+  <ul id="hasil"></ul>
+
+  <script>
+    const nama = ["nathan", "siti", "dedeh", "melin"];
+    const listHasil = document.getElementById("hasil");
+
+    nama.forEach(n => {
+      const jumlahHuruf = n.length;
+      const hasil = jumlahHuruf * 5;
+
+      const item = document.createElement("li");
+      item.textContent = `Nama: ${n}, Jumlah huruf: ${jumlahHuruf}, Dikali 5: ${hasil}`;
+      listHasil.appendChild(item);
+    });
+  </script>
+</body>
+</html>
